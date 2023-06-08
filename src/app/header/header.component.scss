@@ -1,0 +1,59 @@
+@use "sass:math";
+@import "../../mixins";
+@import "../../styles";
+.header {
+
+	// .header__container
+	border-bottom: 1px solid #8dc641;
+	&__container {
+		min-height: rem(120);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	// .header__logo
+
+	&__logo {
+		@include adaptiveValue("font-size", 24, 20);
+		color: #8dc641;
+	}
+
+	// .header__exchange
+
+	&__exchange {
+	}
+}
+.exchange {
+	display: flex;
+	gap: rem(10);
+	// .exchange__item
+
+	&__item {
+
+	}
+}
+.item-exchange {
+	@include adaptiveValue("font-size", 20, 17);
+	display: flex;
+	align-items: center;
+	gap: rem(5);
+	// .item-exchange__icon
+
+	&__icon {
+		svg {
+			width: rem(15);
+			
+		}
+	}
+
+	// .item-exchange__currency
+
+	&__currency {
+	}
+
+	&__separator{
+		font-size: rem(25);
+		color: #8dc641;
+	}
+}

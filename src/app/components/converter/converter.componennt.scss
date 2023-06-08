@@ -1,0 +1,63 @@
+@use "sass:math";
+@import "../../../mixins";
+@import "../../../styles";
+
+input,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border-bottom: 2px solid gray;
+  outline: 0;
+  padding: rem(5);
+  transition: border-color 0.3s ease 0s;
+  &::placeholder{
+	text-align: end;
+  }
+  &:focus{
+	border-color: #8dc641;
+  }
+}
+
+.page {
+
+	// .page__converter
+
+	&__converter {
+	}
+}
+.converter {
+	// .converter__calculator
+	padding: rem(100) 0 rem(100) 0;
+	&__calculator {
+	}
+
+	&__title{
+		font-size: rem(30);
+		text-align: center;
+	}
+}
+.calculator {
+	margin-top: rem(50);
+	display: flex;
+	flex-direction: column;
+	gap: rem(70);
+	align-items: center;
+	justify-content: center;
+	// .calculator__input
+
+	background: #FFFFFF;
+
+	&__input {
+		display: flex;
+		gap: rem(30);
+	}
+
+	// .calculator__output
+
+	&__output {
+		display: flex;
+		gap: rem(30);
+	}
+}

@@ -1,0 +1,21 @@
+<section class="page__converter converter">
+	<h1 class="converter__title">Currency Converter</h1>
+  <div class="converter__calculator calculator">
+    <div class="calculator__input">
+      <select [(ngModel)]="selectedCurr1" (change)="getCurr()" id="selector1">
+        <option default value="UAH">UAH</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+      </select>
+      <input type="text" numbersOnly (input)="getCurr()" [(ngModel)]="curr" placeholder="200.00" />
+    </div>
+	 <div class="calculator__output">
+		<select [(ngModel)]="selectedCurr2" (change)="getCurr()" id="selector1">
+			<option default value="USD">USD</option>
+			<option value="EUR">EUR</option>
+			<option value="UAH">UAH</option>
+		 </select>
+		 <input type="text" numbersOnly (input)="getConvertedCurr()" [(ngModel)]="convertedCurr" placeholder="200.00" />
+	 </div>
+  </div>
+</section>
